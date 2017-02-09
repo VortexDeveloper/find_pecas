@@ -1,0 +1,1 @@
+json.partial! "newslleters/newslleter", newslleter: @newslleter

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @newslleter.name %></td>
+      <td><%= @newslleter.email %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_newslleter_path(@newslleter) %> |
+<%= link_to 'Back', newslleters_path %>

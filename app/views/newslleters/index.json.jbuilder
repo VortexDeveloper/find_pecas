@@ -1,0 +1,1 @@
+json.array! @newslleters, partial: 'newslleters/newslleter', as: :newslleter
