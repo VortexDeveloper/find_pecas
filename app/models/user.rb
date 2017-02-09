@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :products
+  has_many :interests
+  has_many :products, through: :interests
 
   def announcer
     return self if company_id.empty?
