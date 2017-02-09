@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @part.category %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_part_path(@part) %> |
+<%= link_to 'Back', parts_path %>

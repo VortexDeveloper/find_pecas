@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :products
+
+  def announcer
+    return self if company_id.empty?
+    company
+  end
 end

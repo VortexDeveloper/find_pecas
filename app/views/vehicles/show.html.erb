@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vehicle type</th>
+      <th>Vehicle model</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @vehicle.vehicle_type %></td>
+      <td><%= @vehicle.vehicle_model %></td>
+      <td><%= @vehicle.year %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

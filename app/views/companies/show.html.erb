@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Trade</th>
+      <th>Cnpj</th>
+      <th>Phone</th>
+      <th>Cellphone</th>
+      <th>Address</th>
+      <th>Operating hours</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @company.name %></td>
+      <td><%= @company.trade %></td>
+      <td><%= @company.cnpj %></td>
+      <td><%= @company.phone %></td>
+      <td><%= @company.cellphone %></td>
+      <td><%= @company.address %></td>
+      <td><%= @company.operating_hours %></td>
+    </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
