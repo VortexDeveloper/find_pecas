@@ -6221,3 +6221,8 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
 .text-hint {
 	font-size: .7em;
 }
+
+.text-error {
+	font-size: .7em;
+	color: #ff3100;
+}
