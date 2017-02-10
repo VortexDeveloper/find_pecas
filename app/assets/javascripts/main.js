@@ -416,7 +416,7 @@ $(window).load(function(){
 	if ($('#front-slider').length > 0) {
 		$('#front-slider').fractionSlider({
 			'fullWidth': 			true,
-			'controls': 			false, 
+			'controls': 			false,
 			'pager': 				true,
 			'responsive': 			true,
 		    'increase': 			false,
@@ -438,7 +438,7 @@ $(window).load(function(){
 		    itemMargin: 0,
 		    minItems: 4,
 		    maxItems: 4,
-			asNavFor: '#prod-slider', 
+			asNavFor: '#prod-slider',
 		    start: function(slider){
 		        $("#prod-thumbs").resize();
 		    }
