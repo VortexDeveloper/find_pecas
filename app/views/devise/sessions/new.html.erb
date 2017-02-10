@@ -1,0 +1,31 @@
+<div class="b-crumbs-wrap">
+	<div class="cont b-crumbs">
+		<ul>
+			<li>
+				<a href="index.html">FIND PEÇAS</a>
+			</li>
+			<li>
+				<span>LOGIN</span>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="cont maincont">
+	<h1><span>Log in</span></h1>
+	<span class="maincont-line1 maincont-line12"></span>
+	<span class="maincont-line2 maincont-line22"></span>
+
+  <div class="pagecont contacts">
+    <div class="contacts-form">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+          <%= f.submit "Log in" %>
+        <% end %>
+
+        <a href="sign_up" id="sif">Sign up</a>
+        <a href="password/new" id="sif">Forgot your password?</a>
+    </div>
+  </div>
+</div>
