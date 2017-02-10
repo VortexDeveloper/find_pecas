@@ -6217,3 +6217,7 @@ div.zabuto_calendar .badge-today, div.zabuto_calendar div.legend span.badge-toda
 	color: #fff;
     font-family: 'MontserratBlack', 'Montserrat', sans-serif;
 }
+
+.text-hint {
+	font-size: .7em;
+}
