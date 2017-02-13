@@ -12,7 +12,12 @@ Rails.application.routes.draw do
   resources :parts
   resources :products
   resources :vehicles
-  resources :pages
 
-  root to: 'newslleters#index'
+  get 'pages/index'
+  get 'pages/catalog'
+  get 'pages/catalog_gallery'
+  get 'pages/about'
+  get 'pages/contact'
+
+  root to: 'pages#index'
 end

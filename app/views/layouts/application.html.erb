@@ -67,52 +67,40 @@
     	</div>
 
     	<!-- Logotype -->
-    	<p class="header-logo">
-    		<a href="index.html"><img src="img/logo.png" alt=""></a>
-    	</p>
+      <p class="header-logo">
+        <%= link_to root_path do %>
+          <%= image_tag 'logo.png' %>
+        <% end %>
+      </p>
 
     	<!-- Navmenu - start -->
     	<nav id="top-menu">
     		<ul>
-    			<li class="active">
-    				<a href="index.html">Home</a>
+    			<li class="has-child">
+            <%= link_to 'Home', root_path %>
     			</li>
     			<li class="has-child">
-    				<a href="catalog.html">Catalogo</a>
+            <%= link_to 'Catalog', '/pages/catalog' %>
     				<i class="fa fa-angle-down"></i>
     				<ul>
-    					<li><a href="catalog.html">Catalog: List Mode</a></li>
-    					<li><a href="catalog-gallery.html">Catalog: Gallery Mode</a></li>
-    					<li><a href="product.html">Product: Standart</a></li>
-    					<li><a href="product-vehicle.html">Product: Vehicle</a></li>
+              <li><%= link_to 'Catalog: List Mode', '/pages/catalog' %></li>
+              <li><%= link_to 'Catalog: Gallery Mode', '/pages/catalog_gallery' %></li>
+              <li><%= link_to 'Product: Standart', '/parts/show' %></li>
+              <li><%= link_to 'Product: Vehicle', '/vehicles/show' %></li>
     				</ul>
     			</li>
     			<li class="has-child">
-    				<a href="#">Pages</a>
+            <%= link_to 'Pages', '/pages/about' %>
     				<i class="fa fa-angle-down"></i>
     				<ul>
-    					<li><a href="about.html">About Us</a></li>
-    					<li><a href="contacts.html">Contacts</a></li>
-    					<li><a href="gallery.html">Gallery</a></li>
-    					<li><a href="err404.html">Error 404</a></li>
-    				</ul>
-    			</li>
-    			<li class="has-child">
-    				<a href="blog.html">Blog</a>
-    				<i class="fa fa-angle-down"></i>
-    				<ul>
-    					<li><a href="blog.html">Blog: Standart</a></li>
-    					<li><a href="blog-full.html">Blog: Full Width</a></li>
-    					<li><a href="blog-left.html">Blog: Left Sidebar</a></li>
-    					<li><a href="post.html">Single Post: Standart</a></li>
-    					<li><a href="post-map.html">Single Post: With a Map</a></li>
-    					<li><a href="post-video.html">Single Post: Video</a></li>
-    					<li><a href="post-slider.html">Single Post: Slider</a></li>
-    					<li><a href="post-sidebar.html">Single Post: Sidebar</a></li>
+              <li><%= link_to 'About Us', '/pages/about' %></li>
+              <li><%= link_to 'Contacts', '/pages/contact' %></li>
+    					<!--<li><a href="gallery.html">Gallery</a></li>
+    					<li><a href="err404.html">Error 404</a></li>-->
     				</ul>
     			</li>
     			<li>
-    				<a href="contacts.html">Contatos</a>
+    				<%= link_to 'Contacts', '/pages/contact' %>
     			</li>
 
     				</ul>
