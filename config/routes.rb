@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :parts
   resources :products
   resources :vehicles
+  resources :pages
 
   root to: 'newslleters#index'
 end
