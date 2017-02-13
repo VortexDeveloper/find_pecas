@@ -4,8 +4,8 @@
     <title>FindPecas</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -80,27 +80,27 @@
             <%= link_to 'Home', root_path %>
     			</li>
     			<li class="has-child">
-            <%= link_to 'Catalog', '/pages/catalog' %>
+            <%= link_to 'Catalog', pages_catalog_path %>
     				<i class="fa fa-angle-down"></i>
     				<ul>
-              <li><%= link_to 'Catalog: List Mode', '/pages/catalog' %></li>
-              <li><%= link_to 'Catalog: Gallery Mode', '/pages/catalog_gallery' %></li>
-              <li><%= link_to 'Product: Standart', '/parts/show' %></li>
-              <li><%= link_to 'Product: Vehicle', '/vehicles/show' %></li>
+              <li><%= link_to 'Catalog: List Mode', pages_catalog_path %></li>
+              <li><%= link_to 'Catalog: Gallery Mode', pages_catalog_gallery_path %></li>
+              <!--<li><%= link_to 'Product: Standart', parts_path %></li>
+              <li><%= link_to 'Product: Vehicle', vehicles_path %></li>-->
     				</ul>
     			</li>
     			<li class="has-child">
-            <%= link_to 'Pages', '/pages/about' %>
+            <%= link_to 'Pages', pages_about_path %>
     				<i class="fa fa-angle-down"></i>
     				<ul>
-              <li><%= link_to 'About Us', '/pages/about' %></li>
-              <li><%= link_to 'Contacts', '/pages/contact' %></li>
+              <li><%= link_to 'About Us', pages_about_path %></li>
+              <li><%= link_to 'Contacts', pages_contact_path %></li>
     					<!--<li><a href="gallery.html">Gallery</a></li>
     					<li><a href="err404.html">Error 404</a></li>-->
     				</ul>
     			</li>
     			<li>
-    				<%= link_to 'Contacts', '/pages/contact' %>
+    				<%= link_to 'Contacts', pages_contact_path %>
     			</li>
 
     				</ul>

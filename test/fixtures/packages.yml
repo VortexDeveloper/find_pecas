@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  vehicle_amount: 1
+  part_amount: 1
+  visibility: 1
+  price: MyString
+  ad_expiration: 2017-02-13
+
+two:
+  name: MyString
+  vehicle_amount: 1
+  part_amount: 1
+  visibility: 1
+  price: MyString
+  ad_expiration: 2017-02-13

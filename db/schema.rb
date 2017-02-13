@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213170339) do
+ActiveRecord::Schema.define(version: 20170213212046) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -50,6 +50,18 @@ ActiveRecord::Schema.define(version: 20170213170339) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "packages", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "vehicle_amount"
+    t.integer  "part_amount"
+    t.integer  "visibility"
+    t.string   "price"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "description"
+    t.integer  "duration"
+  end
+
   create_table "parts", force: :cascade do |t|
     t.integer  "category_id"
     t.datetime "created_at",  null: false
@@ -67,6 +79,8 @@ ActiveRecord::Schema.define(version: 20170213170339) do
     t.integer  "user_id"
     t.integer  "vehicle_id"
     t.integer  "part_id"
+    t.integer  "package_id"
+    t.index ["package_id"], name: "index_products_on_package_id"
     t.index ["part_id"], name: "index_products_on_part_id"
     t.index ["user_id"], name: "index_products_on_user_id"
     t.index ["vehicle_id"], name: "index_products_on_vehicle_id"
@@ -90,8 +104,10 @@ ActiveRecord::Schema.define(version: 20170213170339) do
     t.string   "last_name"
     t.integer  "admin",                  limit: 1, default: 0
     t.integer  "company_id"
+    t.integer  "package_id"
     t.index ["company_id"], name: "index_users_on_company_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["package_id"], name: "index_users_on_package_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
