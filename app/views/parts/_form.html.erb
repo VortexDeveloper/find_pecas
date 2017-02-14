@@ -1,4 +1,4 @@
-<%= form_for(part) do |f| %>
+<%= form_for(part, html: { :multipart => true }) do |f| %>
   <% if part.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(part.errors.count, "error") %> prohibited this part from being saved:</h2>
@@ -11,9 +11,34 @@
     </div>
   <% end %>
 
+  <%= fields_for :user do |a| %>
+    <%= hidden_field_tag :id %>
+  <% end %>
+
+  <%= fields_for :product do |u| %>
+    <div class="field">
+      <%= u.label :brand %>
+      <%= u.text_field :brand %>
+    </div>
+
+    <div class="field">
+      <%= u.label :name %>
+      <%= u.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= u.label :description %>
+      <%= u.text_field :description %>
+    </div>
+
+    <div class="field">
+      <%= u.label :price %>
+      <%= u.text_field :price %>
+    </div>
+  <% end %>
+
   <div class="field">
-    <%= f.label :category %>
-    <%= f.text_field :category %>
+    <%= f.select :category_id, categories_for_select(part.category_id) %>
   </div>
 
   <div class="actions">

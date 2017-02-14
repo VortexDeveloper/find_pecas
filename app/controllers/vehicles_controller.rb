@@ -15,6 +15,8 @@ class VehiclesController < ApplicationController
   # GET /vehicles/new
   def new
     @vehicle = Vehicle.new
+    @vehicle.product = Product.new
+    @vehicle.product.user = current_user
   end
 
   # GET /vehicles/1/edit
@@ -24,7 +26,9 @@ class VehiclesController < ApplicationController
   # POST /vehicles
   # POST /vehicles.json
   def create
-    @vehicle = Vehicle.new(vehicle_params)
+    @product = Product.create(product_params)
+    @vehicle = @product.create_vehicle(vehicle_params)
+
 
     respond_to do |format|
       if @vehicle.save
@@ -73,6 +77,15 @@ class VehiclesController < ApplicationController
         :vehicle_type,
         :vehicle_model,
         :year
+      )
+    end
+
+    def product_params
+      params.require(:product).permit(
+        :brand,
+        :name,
+        :description,
+        :price
       )
     end
 end

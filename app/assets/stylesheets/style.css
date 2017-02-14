@@ -1276,6 +1276,8 @@ input:focus {
 	position: relative;
 	z-index: 2;
 }
+
+
 .specials .specials-list:after {
 	clear: both;
 	content: '';

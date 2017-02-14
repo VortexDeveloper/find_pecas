@@ -15,6 +15,8 @@ class PartsController < ApplicationController
   # GET /parts/new
   def new
     @part = Part.new
+    @part.product = Product.new
+    @part.product.user = current_user
   end
 
   # GET /parts/1/edit
@@ -24,7 +26,8 @@ class PartsController < ApplicationController
   # POST /parts
   # POST /parts.json
   def create
-    @part = Part.new(part_params)
+    @product = Product.create(product_params)
+    @part = @product.create_part(part_params)
 
     respond_to do |format|
       if @part.save
@@ -70,7 +73,22 @@ class PartsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def part_params
       params.require(:part).permit(
-        :category
+        :category_id
+      )
+    end
+
+    def category_params
+      params.require(:category).permit(
+        :name
+      )
+    end
+
+    def product_params
+      params.require(:product).permit(
+        :brand,
+        :name,
+        :description,
+        :price
       )
     end
 end
